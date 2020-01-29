@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+<ul>
+  	<li><a href="#top">Home</a></li>
+  	<li><a href="https://piazza.com" target = "_blank">Piazza</a></li>
+  	<li><a href="#Assignments">Assignment </a></li>
+ 	<li><a href="#Labs">Labs</a></li>
+  	<li><a href="#Lectures">Lectures</a></li>
+  	<li><a href="#marks">Marks</a></li>
+  	{% if type==True %}
+  		<li><a href="#rr">Remark Requests</a></li>
+  	{%endif%}
+  	<li><a href="#CT">Course Team</a></li>
+  	<li><a href="#feedback">Feedback</a></li>
+  	<li><a href="#Calendar">Calendar</a></li>
+  	{%if not type%}
+  		<li><a href="#OR">Online Resources</a></li>
+  	{%endif%}
+  	<li><a href="{{url_for('logout')}}">Logout</a></li>
+</ul>
+
+<span class="anchor" id=""></span>
+
+<span class="anchor" id=""></span>
+
+
+<div class= "center">
+	<div class=" section">
+		<h1 class="title"><center>CSCB20 Introduction to Web Applications</center></h1>
+	</div>
+	<span class="anchor" id=""></span>
+
+	<div class = "section">
+		<h2>Course Information</h2>
+		<hr>
+		<p>A practical introduction to databases and Web app development. Databases: terminology and applications; creating, querying and updating databases; the entity-relationship model for database design. Web documents and applications: static and interactive documents; Web servers and dynamic server-generated content; Web application development and interface with databases.
+		</p>
+		<p><strong>Prerequisite: </strong>Some experience with programming in an imperative language such as Python, Java or C.
+		</p>
+		<p><strong>Exclusion: </strong>This course may not be taken after - or concurrently with - any C- or D-level CSC course.
+		</p>
+		<p><strong>Syllabus: </strong><a href="dummy.pdf" target = "_blank">PDF</p></a></p>
+	</div>
+	<span class="anchor" id=""></span>
+
+	<div class = "section">
+		<h2>Instructor</h2>
+		<hr>
+		<p><strong>Dr.Anna Brescher</strong><p>
+		<p>Email: <a href="mailto:bretscher@utsc.utoronto.ca">bretscher@utsc.utoronto.ca</a></p>
+		<p>Telephone: (416) 208-4745</p>
+		<p>Office: IC493</p>
+		<p>Office Hours: Wednesday 11:00-12:00</p>
+
+
+	</div>
+
+	<span class="anchor" id="Assignments"></span>
+	<div class="section">
+		<h2>Assignments</h2>
+		<hr>
+		<p>Assignment due dates will be announced in lectures then update on this website. Due time will be 11:59pm no late assignments will be accepted.</p>
+		<div class="divTable">
+			<div class="divTableBody">
+				<div class="divTableRow">
+					<div class="divTableHead">Handout</div>
+					<div class="divTableHead">Topic</div>
+					<div class="divTableHead">Weight</div>
+					<div class="divTableHead">Due Date</div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell"><a href="dummy.pdf" target="_blank">A1 PDF</a></div>
+					<div class="divTableCell">Relational Algebra and MySQL</div>
+					<div class="divTableCell">10%</div>
+					<div class="divTableCell">Wednesday Feb 11</div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell"><a href="dummy.pdf" target="_blank">A2 PDF</a></div>
+					<div class="divTableCell">HTML, CSS, PHP</div>
+					<div class="divTableCell">15%</div>
+					<div class="divTableCell">Friday March 10</div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell"><a href="dummy.pdf" target="_blank">A3 PDF</a></div>
+					<div class="divTableCell">Web Application and Database</div>
+					<div class="divTableCell">15%</div>
+					<div class="divTableCell">Friday March 30</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<span class="anchor" id="Lectures"></span>
+	<div class = "section">
+		<h2>Lectures</h2>
+		<hr>
+		<div class="divTable">
+			<div class="divTableBody">
+				<div class="divTableRow">
+					<div class="divTableHead">Week</div>
+					<div class="divTableHead">Topic</div>
+					<div class="divTableHead">Lecture Material</div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">1</div>
+					<div class="divTableCell">Introduction, Databases background</div>
+					<div class="divTableCell"><a href="dummy.pdf" target="_blank">Database Introduction</a></div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">2</div>
+					<div class="divTableCell">Schema Diagrams, Relational Algebra</div>
+					<div class="divTableCell"><a href="dummy.pdf" target="_blank">Shcema and Relation Algebra</a></div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">3</div>
+					<div class="divTableCell">SQL and MySQL</div>
+					<div class="divTableCell"><a href="dummy.pdf" target="_blank">SQL Excersies</a></div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">4</div>
+					<div class="divTableCell">MySQL Queries, Creating and Editing Tables</div>
+					<div class="divTableCell"><a href="dummy.pdf" target="_blank">My SQL Table Introduction</a></div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">5</div>
+					<div class="divTableCell">MySQL Outer Joins, Views, NULL, string functions, HTML</div>
+					<div class="divTableCell"><a href="dummy.pdf" target="_blank">MySQL More In Depth</a></div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">6</div>
+					<div class="divTableCell">HTML, CSS</div>
+					<div class="divTableCell"><a href="dummy.pdf" target="_blank">Introduction to HTML and CSS</a></div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">7</div>
+					<div class="divTableCell">PHP</div>
+					<div class="divTableCell"><a href="dummy.pdf" target="_blank">PHP Introduction</a></div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">8</div>
+					<div class="divTableCell">PHP and SQL</div>
+					<div class="divTableCell"><a href="dummy.pdf" target="_blank">PHP and SQL Excerise</a></div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">9</div>
+					<div class="divTableCell">JavaScript and jQuery</div>
+					<div class="divTableCell"><a href="dummy.pdf" target="_blank">jQuery Introduction</a></div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">10</div>
+					<div class="divTableCell">jQuery, AJAX, JSON</div>
+					<div class="divTableCell"><a href="dummy.pdf" target="_blank">AJAX and JSON Introduction</a></div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">11</div>
+					<div class="divTableCell">Reviews, Web Search Engine, Advanced Topics</div>
+					<div class="divTableCell"><a href="dummy.pdf" target="_blank">Review Notes</a></div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">12</div>
+					<div class="divTableCell">Last Year's final</div>
+					<div class="divTableCell"><a href="dummy.pdf">W18 Final</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<span class="anchor" id="marks"></span>
+	{%if not type%}
+	<div class=" section">
+		<h2>Marks</h2>
+		<hr>
+		<p>Here are all your marks</p>
+		<div class="divTable">
+			<div class="divTableBody">
+				<div class="divTableRow">
+					<div class="divTableHead">Event</div>
+					<div class="divTableHead">Grade</div>
+				</div>
+				{% for event, grade in data.items() %}
+				<div class="divTableRow">
+							<div class="divTableCell">{{event}}</div>
+							<div class="divTableCell">{{grade}}</div>
+				</div>
+				{%endfor%}
+			</div>
+		</div>
+		<p>Remark Request</p>
+		<form action="{{url_for('remark')}}" method="post">
+			Event:<br>
+			<input type="text" name="event"><br>
+			<textarea name="reason" class="textarea" rows="5"  placeholder="Write your reason here!"></textarea>
+			<p>
+			<input type="submit" value="sumbit" name="submit_remark">
+			</p>
+		</form>
+	</div>
+	{% else %}
+	<div class=" section">
+		<h2>Marks</h2>
+		<hr>
+		<p>Here are all your student marks, use command F to find your student</p>
+		<div class="divTable">
+			{% for name,i in data.items() %}
+			<h2>{{name}}</h2>
+			<div class="divTableBody">
+				<div class="divTableRow">
+					<div class="divTableHead">Event</div>
+					<div class="divTableHead">Grade</div>
+				</div>
+				{% for event, grade in i.items() %}
+				<div class="divTableRow">
+							<div class="divTableCell">{{event}}</div>
+							<div class="divTableCell">{{grade}}</div>
+				</div>
+				{%endfor%}
+				<br>
+				<br>
+			</div>
+			{%endfor%}
+		</div>
+
+	</div>
+	<div class=" section">
+		<h2> Change Marks</h2>
+		<hr>
+		<form action="{{url_for('change_marks')}}" method="post">
+			Username:<br>
+			<input type="text" name="username"><br>
+			Event:<br>
+			<input type="text" name="event"><br>
+			Grade:<br>
+			<input type="number" min="0" max="100" name="grade"><br>
+			<input type="submit" name="submit_marks">
+		</form>
+	</div>
+	{%endif%}
+
+	{%if type==True%}
+	<span class="anchor" id="rr"></span>
+	<div class="section">
+		<h1>Remark Requests</h1>
+		<hr>	
+		{% for i,k in requests.items() %}
+			<p><h3>{{i}}</h3></p>
+			{%for x,y in k.items()%}
+				<p><h4>{{x}}:</h4></p>
+				<p>{{y}}</p>
+			{%endfor%}
+			<hr>
+		{%endfor%}
+	</div>
+	{%endif%}
+
+
+	<span class="anchor" id="CT"></span>
+	<div class="section">
+		<h2>Course Team(TAs)</h2>
+		<hr>
+		<div class="divTable">
+			<div class="divTableBody">
+				<div class="divTableRow">
+					<div class="divTableHead">Name</div>
+					<div class="divTableHead">Email</div>
+					<div class="divTableHead">Office Hours</div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">Zhicong Lu</div>
+					<div class="divTableCell"><a href="mailto:luzhc@cs.toronto.edu">luzhc@cs.toronto.edu</a></div>
+					<div class="divTableCell">IC 404 Mon 4-3 PM</div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">Ayazhan Zhakhan</div>
+					<div class="divTableCell"><a href="mailto:zh.ayazhan@gmail.com">zh.ayazhan@gmail.com</a></div>
+					<div class="divTableCell">HW 234 Tue 1-2 PM</div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">Ning Ling</div>
+					<div class="divTableCell"><a href="mailto:ning.lin@mail.utoronto.ca">ning.lin@mail.utoronto.ca</a></div>
+					<div class="divTableCell">AC 123 Thur 6-7PM</div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">Ihsan Etwaroo</div>
+					<div class="divTableCell"><a href="mailto:ihsan.etwaroo@mail.utoronto.ca">ihsan.etwaroo@mail.utoronto.ca</a></div>
+					<div class="divTableCell">HW 222 Fri 8-11 AM</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<span class="anchor" id="Labs"></span>
+	<div class="section">
+		<h2>Labs</h2>
+		<hr>
+		<p>This section contains the tutorial exercises.</p>
+		<div class="divTable">
+			<div class="divTableBody">
+				<div class="divTableRow">
+					<div class="divTableHead">Name</div>
+					<div class="divTableHead">Email</div>
+					<div class="divTableHead">Office Hours</div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">Zhicong Lu</div>
+					<div class="divTableCell"><a href="mailto:luzhc@cs.toronto.edu">luzhc@cs.toronto.edu</a></div>
+					<div class="divTableCell">IC 404 Mon 4-3 PM</div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">Ayazhan Zhakhan</div>
+					<div class="divTableCell"><a href="mailto:zh.ayazhan@gmail.com">zh.ayazhan@gmail.com</a></div>
+					<div class="divTableCell">HW 234 Tue 1-2 PM</div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">Ning Ling</div>
+					<div class="divTableCell"><a href="mailto:ning.lin@mail.utoronto.ca">ning.lin@mail.utoronto.ca</a></div>
+					<div class="divTableCell">AC 123 Thur 6-7PM</div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">Ihsan Etwaroo</div>
+					<div class="divTableCell"><a href="mailto:ihsan.etwaroo@mail.utoronto.ca">ihsan.etwaroo@mail.utoronto.ca</a></div>
+					<div class="divTableCell">HW 222 Fri 8-11 AM</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<span class="anchor" id="feedback"></span>
+	{%if not type%}
+	<div class="section">
+		<h2>Feedback</h2>
+		<hr>
+		<p>Let us know how we are doing, give us feedback anything is appreciated. Dont be shy this is anonymous!</p>
+		<p>What is your instructor's unsername?</p>
+		<form action="{{url_for('send_feedback')}}" method="post">	
+			<textarea name="username" class="textarea"  placeholder="Write your instructor's username."></textarea>
+			<p>What do you like about the instructor teaching?</p>
+			<p>What do you recommend the instructor to do to improve their teaching?</p>
+			<p>What do you recommend the lab instructors to do to improve their lab teaching?</p>
+			<p>What do you like about the labs?</p>
+			<textarea name="feedback" class="textarea" rows="18"  placeholder="Write your feedback here!"></textarea>
+			<p>
+				<input type="submit" name="action" value="Submit Feedback">
+			</p>
+		</form>
+		</section>
+	</div>
+	{%else%}
+	<div class=" section">
+		<h1>Feedback</h1>
+		<hr>	
+		{% for key in feedback.keys() %}
+			{%for f in feedback[key]%}
+				<p>	{{key}}</p>
+				<p>{{f}}</p>
+				<hr>
+			{%endfor%}
+		{%endfor%}
+		</div>
+	{%endif%}
+
+
+	<span class="anchor" id="Calendar"></span>
+	<div class="section">
+		<h2>Calendar</h2>
+		<hr>
+		<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=nlgfd5ts5mkr7i4q9h1cprd82g%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FToronto" 
+		style="border-width:0" width="100%" height="800" frameborder="0" scrolling="no"></iframe>
+	</div>
+	{%if not type%}
+		<span class="anchor" id="OR"></span>
+		<div class="section">
+			<h2>Online Resources</h2>
+			<hr>
+			<a href="dummy.pdf">Course Website</a>
+			<p>Course information, lecture notes, tutorial material, important announcements, etc. will be posted on the course website. It is your responsibility to visit it frequently.</p>
+			<p>Beginner Tutorial for <a href="dummy.pdf">MySQL</a>.</p>
+			<p><u>Email Communication</u>: Questions regarding the course material, assignments, midterm, etc. should be posed on the bulletin board. Questions about the assignment which you feel you cannot formulate without revealing your solution (should be very rare!), as well as questions and concerns regarding your personal matters should be directed to the instructor.</p>
+		</div>
+	{%endif%}
+</div>
+<br>
+<a href="{{url_for('login')}}">Log out</a>
+<footer>
+	<div class="footer">
+		<a href="http://web.cs.toronto.edu/" target="blank_" id = link>Department of Computer Science at UofT</a>
+		<p>Site Designed by Ivanhoe Chou and Nishant Patel</p>
+	</div>
+</footer>
+
+</body>
+</html>{%if not type%}
+{%endif%}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+  <script type="text/javascript">
+    $('.message a').click(function(){
+      $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+    });
+  </script>
+</head>
+<body>
+  
+  <div class="login-page">
+    <div class="form">
+      <div class="logo">
+        <img src="https://elevatetechfest.com/wp-content/uploads/2018/09/U-of-T-Logo.png" width="200" height="100">
+      </div>
+      <b>Welcome to B20 Portal </b> 
+        <form method="post" class="login-form">
+          <p>Enter your Username:<input type="text" name="username">
+          <p>Enter your Password:<input type="password" name="password"/>
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+              <li style="color: red;">{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+          {% endwith %}
+          {% block body %}{% endblock %}
+          <button>submit</button>
+          <p class="message">Not registered? <a href="/register">Create an account</a></p>
+        </form>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Account</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+  <div class="login-page">
+    <div class="form">
+      <div class="logo">
+        <img src="https://elevatetechfest.com/wp-content/uploads/2018/09/U-of-T-Logo.png" width="200" height="100">
+      </div>
+      <b>Create Your Account </b> 
+        <form method="post" class="login-form">
+          <p>Choose your Username:<input type="text" name="username"></p>
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+              <li style="color:red;">{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+          {% endwith %}
+          {% block body %}{% endblock %}
+          <p>Choose your Password:<input type="password" name="password"/></p>
+          <p>Student or Instructor?:<input type="text" name="type"></p>
+          <br>
+          <br>
+          <br>
+          <br>
+          <button>submit</button>
+        </form>
+    </div>
+  </div>
+
+</body>
+</html>
+Chat conversation end
+Type a message...
+
+
+
